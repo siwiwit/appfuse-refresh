@@ -5,6 +5,10 @@
     </Displayers>
     <Menus>
         <Menu name="Home" title="home.title" page="/home" roles="ROLE_ADMIN,ROLE_USER"/>
+        <Menu name="AccountInformation" title="menu.account.information" description="Account Information" page="/userform" roles="ROLE_USER">
+            <Item name="BalanceInquiry" title="menu.balance.inquiry" description="Balance Inquiry" page="/account/balanceInquiry"/>
+            <Item name="AccountStatement" title="menu.account.statement" description="Account Statement" page="/account/accountStatement"/>
+        </Menu>
         <Menu name="UserMenu" title="menu.user" description="User Menu" page="/userform" roles="ROLE_ADMIN,ROLE_USER"/>
         <Menu name="AdminMenu" title="menu.admin" description="Admin Menu" roles="ROLE_ADMIN" page="/admin/users">
             <Item name="ViewUsers" title="menu.admin.users" page="/admin/users"/>
