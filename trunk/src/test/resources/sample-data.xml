@@ -119,4 +119,148 @@
             <value description="role_id">-2</value>
         </row>
     </table>
+
+    <table name='account'>
+        <column>id</column>
+        <column>account_type</column>
+        <column>currency</column>
+        <column>balance</column>
+        <column>account_number</column>
+        <row>
+            <value>1</value>
+            <value>TABUNGAN</value>
+            <value>IDR</value>
+            <value>100000</value>
+            <value>1234567890</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>DEPOSITO</value>
+            <value>IDR</value>
+            <value>200000</value>
+            <value>9999988888</value>
+        </row>
+    </table>
+    <table name="simulator">
+        <column>type</column>
+        <column>response_code</column>
+        <column>description</column>
+        <column>data1</column>
+        <column>desc1</column>
+        <column>data2</column>
+        <column>desc2</column>
+        <column>data3</column>
+        <column>desc3</column>
+        <column>data4</column>
+        <column>desc4</column>
+        <column>data5</column>
+        <column>desc5</column>
+        <column>data6</column>
+        <column>desc6</column>
+        <column>data7</column>
+        <column>desc7</column>
+        <row>
+            <value description="type">BALANCE_INQUIRY</value>
+            <value description="response_code">00</value>
+            <value description="description">Account No, Account Type, Currency, Avail Balance</value>
+            <value description="data1">6040659348</value>
+            <value description="desc1">Account No</value>
+            <value description="data2">Tabungan</value>
+            <value description="desc2">Account Type</value>
+            <value description="data3">IDR</value>
+            <value description="desc3">Currency</value>
+            <value description="data4">10000000</value>
+            <value description="desc4">Avail Balance</value>
+        </row>
+        <row>
+            <value description="type">ACCOUNT_STATEMENT</value>
+            <value description="response_code">00</value>
+            <value description="description">Date|Description|Branch|Amount|Type|Balance</value>
+            <value description="data1">21/12/2014|TARIKAN ATM 21/11|0998|200000|DB|5097555</value>
+            <value description="desc1">Transaksi 1</value>
+            <value description="data2">21/12/2014|BIAYA ADM|0000|13000|DB|5084555</value>
+            <value description="desc2">Transaksi 2</value>
+            <value description="data3">25/12/2014|KR OTOMATIS SMEMFTS EFT12637|0000|11318260|CR|16402815</value>
+            <value description="desc3">Transaksi 3</value>
+            <value description="data4">25/12/2014|SETORAN TUNAI|0280|5000000|CR|21402815</value>
+            <value description="desc4">Tansaksi 4</value>
+            <value description="data5">26/12/2014|TRSF E-BANKING DB 2611/FTSCY/WS95011 3500000.00 cicilan mobil|6040|3500000|DB|17902815 </value>
+            <value description="desc5">Tansaksi 5</value>
+            <value description="data6">27/12/2014|BYR VIA E-BANKING 27/11 WSID025Q177 0865 PLN PREPAID 01108569946|0998|250000|DB|17652815</value>
+            <value description="desc6">Tansaksi 6</value>
+            <value description="data7">28/12/2012|TARIKAN ATM 28/11|0998|300000|DB|17452815</value>
+            <value description="desc7">Tansaksi 7</value>
+        </row>
+        <row>
+            <value description="type">ACCOUNT_STATEMENT_SUMMARY</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">5297555</value>
+            <value description="desc1">Starting Balance</value>
+            <value description="data2">16318260</value>
+            <value description="desc2">Total Credit</value>
+            <value description="data3">4263000</value>
+            <value description="desc3">Total Debit</value>
+            <value description="data4">17452815</value>
+            <value description="desc4">Ending Balance</value>
+        </row>
+        <row>
+            <value description="type">TRANSFER_REGISTER_SAME_BANK</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">6040651111</value>
+            <value description="desc1">Account Number</value>
+            <value description="data2">ADINDA PUTRA</value>
+            <value description="desc2">Account Name</value>
+        </row>
+        <row>
+            <value description="type">TRANSFER_REGISTER_OTHER_BANK</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">0012</value>
+            <value description="desc1">Kode Bank</value>
+            <value description="data2">BCA</value>
+            <value description="desc2">Nama Bank</value>
+            <value description="data3">220651111</value>
+            <value description="desc3">Account Number</value>
+            <value description="data4">ALIYAH PUTRI</value>
+            <value description="desc4">Account Name</value>
+        </row>
+        <row>
+            <value description="type">TRANSFER_SAME_BANK</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">6040651111</value>
+            <value description="desc1">Account Number</value>
+            <value description="data2">ADINDA PUTRA</value>
+            <value description="desc2">Account Name</value>
+            <value description="data3">120000</value>
+            <value description="desc3">Nominal</value>
+            <value description="data4">Transfer ke Anak</value>
+            <value description="desc4">News</value>
+            <value description="data5">25/02/2015</value>
+            <value description="desc5">Transfer Time</value>
+        </row>
+        <row>
+            <value description="type">TRANSFER_OTHER_BANK</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">011</value>
+            <value description="desc1">Bank Code</value>
+            <value description="data2">BCA</value>
+            <value description="desc2">Bank Name</value>
+            <value description="data3">11122999888</value>
+            <value description="desc3">Account Number</value>
+            <value description="data4">BISHMA ABIMANYU</value>
+            <value description="desc4">Account Name</value>
+            <value description="data5">120000</value>
+            <value description="desc5">Nominal</value>
+            <value description="data6">Transfer antar bank</value>
+            <value description="desc6">News</value>
+            <value description="data7">25/02/2015</value>
+            <value description="desc7">Transfer Time</value>
+
+        </row>
+    </table>
+
 </dataset>

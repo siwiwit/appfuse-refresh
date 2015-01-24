@@ -8,5 +8,7 @@
     <session-factory>
         <mapping class="com.ib.model.User"/>
         <mapping class="com.ib.model.Role"/>
+        <mapping class="com.ib.model.Account"/>
+        <mapping class="com.ib.model.Simulator"/>
     </session-factory>
 </hibernate-configuration>

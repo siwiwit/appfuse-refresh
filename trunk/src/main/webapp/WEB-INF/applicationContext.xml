@@ -12,8 +12,22 @@
     <context:component-scan base-package="com.ib"/>
 
     <!-- Add new DAOs here -->
+    <bean id="accountDao" class="com.ib.dao.hibernate.AccountDaoHibernate" >
+        <property name="sessionFactory" ref="sessionFactory"/>
+        <constructor-arg value="1"/>
+    </bean>
+    <bean id="simulatorDao" class="com.ib.dao.hibernate.SimulatorDaoHibernate" >
+        <property name="sessionFactory" ref="sessionFactory"/>
+        <constructor-arg value="1"/>
+    </bean>
 
     <!-- Add new Managers here -->
+    <bean id="accountManager" class="com.ib.service.impl.AccountManagerImpl" >
+        <constructor-arg ref="accountDao"/>
+    </bean>
+    <bean id="simulatorManager" class="com.ib.service.impl.SimulatorManagerImpl" >
+        <constructor-arg ref="simulatorDao"/>
+    </bean>
     
     <!-- Configure and Alternative PasswordTokenManager -->
 	<!-- <bean id="passwordTokenManager" class="com.ib.service.impl.PersistentPasswordTokenManagerImpl" autowire="default" /> -->

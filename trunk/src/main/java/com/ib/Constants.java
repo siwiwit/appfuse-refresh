@@ -86,4 +86,20 @@ public final class Constants {
      * @deprecated No longer used to set themes.
      */
     public static final String CSS_THEME = "csstheme";
+
+    public static final String APPLICATION_PATH = "demo";   //
+    public static final String STATUS_SUKSES = "SUKSES";
+
+    public static final String SAME_BANK = "sameBank";
+    public static final String OTHER_BANK = "otherBank";
+
+    public static final Integer SIMULATOR_DATACOUNT = 7;
+    public static final String TYPE_BALANCE_INQUIRY = "BALANCE_INQUIRY";
+    public static final String TYPE_ACCOUNT_STATEMENT = "ACCOUNT_STATEMENT";
+    public static final String TYPE_ACCOUNT_STATEMENT_SUMMARY = "ACCOUNT_STATEMENT_SUMMARY";
+    public static final String TYPE_TRANSFER_REGISTER_SAME_BANK = "TRANSFER_REGISTER_SAME_BANK";
+    public static final String TYPE_TRANSFER_REGISTER_OTHER_BANK = "TRANSFER_REGISTER_OTHER_BANK";
+    public static final String TYPE_TRANSFER_SAME_BANK = "TRANSFER_SAME_BANK";
+    public static final String TYPE_TRANSFER_OTHER_BANK = "TRANSFER_OTHER_BANK";
+
 }
