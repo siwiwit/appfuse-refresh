@@ -10,6 +10,10 @@
     </c:if>
     <menu:displayMenu name="Home"/>
     <menu:displayMenu name="AccountInformation"/>
+    <menu:displayMenu name="FundTransfer"/>
+    <menu:displayMenu name="Purchase"/>
+    <menu:displayMenu name="Payment"/>
+
     <menu:displayMenu name="UserMenu"/>
     <menu:displayMenu name="AdminMenu"/>
     <menu:displayMenu name="Logout"/>

@@ -9,6 +9,24 @@
             <Item name="BalanceInquiry" title="menu.balance.inquiry" description="Balance Inquiry" page="/account/balanceInquiry"/>
             <Item name="AccountStatement" title="menu.account.statement" description="Account Statement" page="/account/accountStatement"/>
         </Menu>
+        <Menu name="FundTransfer" title="menu.fund.transfer" description="Fund Transfer" page="/userform" roles="ROLE_USER">
+            <Item name="RegisterDestinationAccount" title="menu.register.account" description="Register Destination Account" page="/transfer/registerAccount"/>
+            <Item name="TransferInternal" title="menu.transfer.internal" description="Transfer" page="/transfer/transferInput"/>
+            <Item name="TransferOtherBank" title="menu.transfer.other" description="Transfer" page="/transfer/transferOtherInput"/>
+        </Menu>
+        <Menu name="Purchase" title="menu.purchase" description="Purchase" page="/userform" roles="ROLE_USER">
+            <Item name="PrepaidHandphone" title="menu.prepaid.handphone" description="Prepaid Handphone" page="/purchase/phoneVoucherInput"/>
+            <Item name="PrepaidElectricity" title="menu.prepaid.electricity" description="Prepaid Electrycity" page="/admin/users"/>
+            <!--<Item name="AirlineTicket" title="menu.airline.ticket" description="Airline Ticket" page="/admin/users"/>-->
+        </Menu>
+        <Menu name="Payment" title="menu.payment" description="Payment" page="/userform" roles="ROLE_USER">
+            <Item name="PostpaidHandphone" title="menu.postpaid.handphone" description="Postpaid Handphone" page="/admin/users"/>
+            <Item name="TelkomPhone" title="menu.telkom.phone" description="Telepon" page="/admin/users"/>
+            <Item name="PostpaidElectricity" title="menu.postpaid.eletricity" description="Postpaid Electricity" page="/admin/users"/>
+            <Item name="Water" title="menu.payment.water" description="Water" page="/admin/users"/>
+            <Item name="Tv" title="menu.payment.tv" description="TV" page="/admin/users"/>
+            <Item name="Internet" title="menu.payment.internet" description="Internet" page="/admin/users"/>
+        </Menu>
         <Menu name="UserMenu" title="menu.user" description="User Menu" page="/userform" roles="ROLE_ADMIN,ROLE_USER"/>
         <Menu name="AdminMenu" title="menu.admin" description="Admin Menu" roles="ROLE_ADMIN" page="/admin/users">
             <Item name="ViewUsers" title="menu.admin.users" page="/admin/users"/>

@@ -87,7 +87,6 @@ public final class Constants {
      */
     public static final String CSS_THEME = "csstheme";
 
-    public static final String APPLICATION_PATH = "demo";   //
     public static final String STATUS_SUKSES = "SUKSES";
 
     public static final String SAME_BANK = "sameBank";
