@@ -21,7 +21,6 @@
     <h2><fmt:message key="menu.account.statement"/></h2>
     <hr />
 
-    <%--<form method="get" id="account" action="<c:url value='/accountstatementresult'/>" class="well" autocomplete="off">--%>
     <spring:bind path="account.*">
         <c:if test="${not empty status.errorMessages}">
             <div class="alert alert-danger alert-dismissable">
@@ -33,7 +32,7 @@
         </c:if>
     </spring:bind>
 
-    <form:form commandName="account" method="post" action="${applPath}/account/accountStatement" id="accountForm" >
+    <form:form commandName="account" method="post" action="accountStatement" id="accountForm" >
     <table class="table-striped" style="width: 100%">
         <tr style="vertical-align: middle">
             <td style="width: 200px;">
@@ -108,16 +107,13 @@
 
     <br />
     <hr />
+
     <button type="submit" name="view" class="btn btn-primary" onclick="bCancel=false">
         <i class="icon-upload icon-white"></i> <fmt:message key="view.accountStatement"/>
     </button>
+
     </form:form>
-    <%--<div id="actions" class="form-group">
-        <a class="btn btn-primary" href="accountstatementresult" >
-            <i class="icon-ok icon-white"></i>
-            <fmt:message key="view.accountstatement"/>
-        </a>
-    </div>--%>
+
 </div>
 
 

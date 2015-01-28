@@ -37,8 +37,8 @@ public class AccountStatementResultController extends BaseFormController {
     }
 
     public AccountStatementResultController() {
-        setCancelView("redirect:" + Constants.APPLICATION_PATH + "/home");
-        setSuccessView("redirect:" +Constants.APPLICATION_PATH + "/account/accountStatementResult");
+        setCancelView("redirect:/home");
+        setSuccessView("redirect:/account/accountStatementResult");
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -98,6 +98,6 @@ public class AccountStatementResultController extends BaseFormController {
         model.addAttribute("accountStatementList", accountStatementList);
         model.addAttribute("asSummary", summary);
 
-        return Constants.APPLICATION_PATH + "/account/accountStatementResult";
+        return "/account/accountStatementResult";
     }
 }

@@ -25,7 +25,7 @@ import java.util.Date;
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
  */
 @Controller
-@RequestMapping(Constants.APPLICATION_PATH + "/account/accountStatement")
+@RequestMapping("/account/accountStatement")
 public class AccountStatementController extends BaseFormController {
     private SimulatorManager simulatorManager;
 
@@ -36,7 +36,7 @@ public class AccountStatementController extends BaseFormController {
 
     public AccountStatementController() {
         setCancelView("redirect:home");
-        setSuccessView("redirect:" + Constants.APPLICATION_PATH  +"/account/accountStatementResult");
+        setSuccessView("redirect:/account/accountStatementResult");
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -54,10 +54,9 @@ public class AccountStatementController extends BaseFormController {
 
         model.addAttribute("account", account);
         model.addAttribute("periodType", "daily");
-        model.addAttribute("applPath", Constants.APPLICATION_PATH);
         model.addAttribute("newDate", DateUtil.convertDateToString(new Date()));
 
-        return Constants.APPLICATION_PATH + "/account/accountStatement";
+        return "/account/accountStatement";
     }
 
     @RequestMapping(method=RequestMethod.POST)
