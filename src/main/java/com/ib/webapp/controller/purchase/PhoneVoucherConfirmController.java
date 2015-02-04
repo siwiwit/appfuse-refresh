@@ -3,6 +3,7 @@ package com.ib.webapp.controller.purchase;
 import com.ib.Constants;
 import com.ib.model.Simulator;
 import com.ib.model.Transfer;
+import com.ib.model.VoucherPurchase;
 import com.ib.service.SimulatorManager;
 import com.ib.util.DateUtil;
 import com.ib.webapp.controller.BaseFormController;
@@ -27,7 +28,7 @@ import java.util.Date;
 @RequestMapping("/purchase/phoneVoucherConfirm*")
 public class PhoneVoucherConfirmController extends BaseFormController {
     private SimulatorManager simulatorManager;
-    private Transfer transfer;
+    private VoucherPurchase voucherPurchase;
     private String token;
     @Autowired
     public void setSimulatorManager(final SimulatorManager simulatorManager) {
@@ -35,28 +36,27 @@ public class PhoneVoucherConfirmController extends BaseFormController {
     }
 
     public PhoneVoucherConfirmController() {
-        setCancelView("transfer/phoneVoucherInput");
-        setSuccessView("transfer/phoneVoucherResult");
+        setCancelView("/purchase/phoneVoucherInput");
+        setSuccessView("/purchase/phoneVoucherResult");
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView handleRequest(
-//            @ModelAttribute("transfer") final Transfer transfer)
+//            @ModelAttribute("voucherPurchase") final Transfer voucherPurchase)
     )
             throws Exception {
         ModelAndView model = new ModelAndView();
         DateFormat sdf = new SimpleDateFormat(DateUtil.getDatePattern());
 
-        transfer = new Transfer();
-        Simulator simulator = simulatorManager.findByType(Constants.TYPE_TRANSFER_SAME_BANK);
-        transfer.setDestinationAccountNumber(simulator.getData1());
-        transfer.setDestinationAccountName(simulator.getData2());
-        transfer.setAmount(BigDecimal.valueOf(Double.parseDouble(simulator.getData3())));
-        transfer.setNews(simulator.getData4());
+        voucherPurchase = new VoucherPurchase();
+        Simulator simulator = simulatorManager.findByType(Constants.TYPE_PURCHASE_VOUCHER_PHONE);
+        voucherPurchase.setPhoneNumber(simulator.getData1());
+        voucherPurchase.setOperator(simulator.getData2());
+        voucherPurchase.setDenomination(simulator.getData3());
+        voucherPurchase.setAmount(BigDecimal.valueOf(Double.parseDouble(simulator.getData4())));
 
-        transfer.setTransferTime(sdf.parse(simulator.getData5()));
 
-                model.addObject("transfer", transfer);
+        model.addObject("voucherPurchase", voucherPurchase);
         model.addObject("token", token);
 
         return model;
@@ -64,16 +64,16 @@ public class PhoneVoucherConfirmController extends BaseFormController {
 
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView onSubmit(
-//            final Transfer transfer,
+//            final Transfer voucherPurchase,
             final RedirectAttributes redirectAttributes,
             final HttpServletRequest request)
             throws Exception
     {
 
-        transfer.setTransactionDate(new Date());
-        transfer.setStatus(Constants.STATUS_SUKSES);
+        voucherPurchase.setTransactionDate(new Date());
+        voucherPurchase.setStatus(Constants.STATUS_SUKSES);
 
-        redirectAttributes.addFlashAttribute("transfer", transfer);
+        redirectAttributes.addFlashAttribute("voucherPurchase", voucherPurchase);
         return new ModelAndView(new RedirectView(getSuccessView()));
     }
 }

@@ -1,7 +1,7 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 <head>
-    <title><fmt:message key="menu.transfer.internal"/></title>
+    <title><fmt:message key="menu.prepaid.handphone"/></title>
 </head>
 
 <%--<div class="col-sm-2">
@@ -9,45 +9,40 @@
     <p><fmt:message key="signup.message"/></p>
 </div>--%>
 <div class="col-sm-7">
-    <h2><fmt:message key="menu.transfer.internal"/></h2>
+    <h2><fmt:message key="menu.prepaid.handphone"/></h2>
     <hr />
     <br />
-    <spring:bind path="transfer.*">
+    <spring:bind path="voucherPurchase.*">
 
     </spring:bind>
-    <form:form commandName="transfer" method="post" action="/transfer/transferResult" id="transferForm" >
+    <form:form commandName="voucherPurchase" method="post" action="voucherPurchaseResult" id="voucherPurchaseForm" >
 
         <table class="table-striped" style="width: 100%">
 
             <tr>
                 <th style="width: 200px"><fmt:message key="transactionDate"/></th>
-                <td><c:out value="${transfer.strTransactionDate}"/></td>
+                <td><c:out value="${voucherPurchase.strTransactionDate}"/></td>
 
             </tr>
             <tr>
-                <th><fmt:message key="transfer.destinationAccountNumber"/></th>
-                <td><c:out value="${transfer.destinationAccountNumber}"/></td>
-
+                <th><fmt:message key="voucherPurchase.operator"/></th>
+                <td><c:out value="${voucherPurchase.operator}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="transfer.destinationAccountName"/></th>
-                <td><c:out value="${transfer.destinationAccountName}"/></td>
+                <th><fmt:message key="voucherPurchase.phoneNumber"/></th>
+                <td><c:out value="${voucherPurchase.phoneNumber}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="transfer.amount"/></th>
-                <td><c:out value="${transfer.amount}"/></td>
+                <th><fmt:message key="voucherPurchase.denomination"/></th>
+                <td><c:out value="${voucherPurchase.denomination}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="transfer.transferTime"/></th>
-                <td><c:out value="${transfer.transferTime}"/></td>
-            </tr>
-            <tr>
-                <th><fmt:message key="transfer.news"/></th>
-                <td><c:out value="${transfer.news}"/></td>
+                <th><fmt:message key="voucherPurchase.amount"/></th>
+                <td><c:out value="${voucherPurchase.amount}"/></td>
             </tr>
             <tr>
                 <th><fmt:message key="status"/></th>
-                <td><c:out value="${transfer.status}"/></td>
+                <td><c:out value="${voucherPurchase.status}"/></td>
             </tr>
         </table>
 

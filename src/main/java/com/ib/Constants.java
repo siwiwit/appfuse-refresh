@@ -101,4 +101,10 @@ public final class Constants {
     public static final String TYPE_TRANSFER_SAME_BANK = "TRANSFER_SAME_BANK";
     public static final String TYPE_TRANSFER_OTHER_BANK = "TRANSFER_OTHER_BANK";
 
+    public static final String TYPE_PURCHASE_VOUCHER_PHONE = "PURCHASE_VOUCHER_PHONE";
+    public static final String TYPE_PURCHASE_VOUCHER_ELECTRICITY = "PURCHASE_VOUCHER_ELECTRICITY";
+
+    public static final String TYPE_PAYMENT_POSTPAID = "PAYMENT_POSTPAID";
+    public static final String TYPE_PAYMENT_ELECTRICITY = "PAYMENT_ELECTRICITY";
+    public static final String TYPE_PAYMENT_TV = "PAYMENT_TV";
 }

@@ -259,7 +259,75 @@
             <value description="desc6">News</value>
             <value description="data7">25/02/2015</value>
             <value description="desc7">Transfer Time</value>
-
+        </row>
+        <row>
+            <value description="type">PURCHASE_VOUCHER_PHONE</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">0812111222333</value>
+            <value description="desc1">Phone Number</value>
+            <value description="data2">Telkomsel Prepaid</value>
+            <value description="desc2">Operator</value>
+            <value description="data3">50.000</value>
+            <value description="desc3">Denomination</value>
+            <value description="data4">48000</value>
+            <value description="desc4">Amount</value>
+        </row>
+        <row>
+            <value description="type">PURCHASE_VOUCHER_ELECTRICITY</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">14020110780|541102755822|DJIMMY DIRJAYA|R1/450VA</value>
+            <value description="desc1">meterNumber|idPel|customerName|tarif/Daya</value>
+            <value description="data2">0000000002930BEC25B24C97B8EBCF060</value>
+            <value description="desc2">MLPO</value>
+            <value description="data3">100000|80000</value>
+            <value description="desc3">amount|rpStroomToken</value>
+            <value description="data4">3000|0|0|0|20039.99</value>
+            <value description="desc4">adminBank|materai|ppn|ppj|angsuran</value>
+            <value description="data5">29.92</value>
+            <value description="desc5">jmlKwh</value>
+            <value description="data6">6003 2572 4740 0478 3331</value>
+            <value description="desc6">StroomToken</value>
+        </row>
+        <row>
+            <value description="type">PAYMENT_POSTPAID</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">0812111222333</value>
+            <value description="desc1">Phone Number</value>
+            <value description="data2">Telkomsel Prepaid</value>
+            <value description="desc2">Operator</value>
+            <value description="data3">50.000</value>
+            <value description="desc3">Denomination</value>
+            <value description="data4">48000</value>
+            <value description="desc4">Amount</value>
+        </row>
+        <row>
+            <value description="type">PAYMENT_ELECTRICITY</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">0812111222333</value>
+            <value description="desc1">Phone Number</value>
+            <value description="data2">Telkomsel Prepaid</value>
+            <value description="desc2">Operator</value>
+            <value description="data3">50.000</value>
+            <value description="desc3">Denomination</value>
+            <value description="data4">48000</value>
+            <value description="desc4">Amount</value>
+        </row>
+        <row>
+            <value description="type">PAYMENT_TV</value>
+            <value description="response_code">00</value>
+            <value description="description">Sukses</value>
+            <value description="data1">0812111222333</value>
+            <value description="desc1">Phone Number</value>
+            <value description="data2">Telkomsel Prepaid</value>
+            <value description="desc2">Operator</value>
+            <value description="data3">50.000</value>
+            <value description="desc3">Denomination</value>
+            <value description="data4">48000</value>
+            <value description="desc4">Amount</value>
         </row>
     </table>
 

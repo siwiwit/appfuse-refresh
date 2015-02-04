@@ -5,35 +5,39 @@
 </head>
 
 <div class="col-sm-7">
-    <h2><fmt:message key="menu.prepaid.handphone"/></h2>
+    <h2><fmt:message key="menu.prepaid.electricity"/></h2>
     <hr />
     <br />
-    <spring:bind path="voucherPurchase.*">
+    <spring:bind path="electricityPurchase.*">
         
     </spring:bind>
-    <form:form commandName="voucherPurchase" method="post" action="phoneVoucherConfirm" id="phoneVoucherConfirmForm" >
+    <form:form commandName="electricityPurchase" method="post" action="electricityPurchaseConfirm" id="electricityPurchaseConfirmForm" >
 
         <table class="table-striped" style="width: 100%">
 
             <tr>
-                    <th><fmt:message key="voucherPurchase.accountNumber"/></th>
-                <td><c:out value="${voucherPurchase.accountNumber}"/></td>
+                    <th><fmt:message key="purchase.accountNumber"/></th>
+                <td><c:out value="${electricityPurchase.accountNumber}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="voucherPurchase.operator"/></th>
-                <td><c:out value="${voucherPurchase.operator}"/></td>
+                <th><fmt:message key="electricityPurchase.meterNumber"/></th>
+                <td><c:out value="${electricityPurchase.meterNumber}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="voucherPurchase.denomination"/></th>
-                <td><c:out value="${voucherPurchase.denomination}"/></td>
+                <th><fmt:message key="electricityPurchase.idPel"/></th>
+                <td><c:out value="${electricityPurchase.idPel}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="voucherPurchase.amount"/></th>
-                <td><c:out value="${voucherPurchase.amount}"/></td>
+                <th><fmt:message key="electricityPurchase.customerName"/></th>
+                <td><c:out value="${electricityPurchase.customerName}"/></td>
             </tr>
             <tr>
-                <th><fmt:message key="voucherPurchase.phoneNumber"/></th>
-                <td><c:out value="${voucherPurchase.phoneNumber}"/></td>
+                <th><fmt:message key="electricityPurchase.tarifDaya"/></th>
+                <td><c:out value="${electricityPurchase.tarifDaya}"/></td>
+            </tr>
+            <tr>
+                <th><fmt:message key="purchase.amount"/></th>
+                <td><c:out value="${electricityPurchase.amount}"/></td>
             </tr>
         </table>
 

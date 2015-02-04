@@ -2,9 +2,11 @@ package com.ib.webapp.controller.purchase;
 
 import com.ib.Constants;
 import com.ib.model.Transfer;
+import com.ib.model.VoucherPurchase;
 import com.ib.util.DateUtil;
 import com.ib.webapp.controller.BaseFormController;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,31 +25,20 @@ import java.util.Map;
 @RequestMapping("/purchase/phoneVoucherInput*")
 public class PhoneVoucherInputController extends BaseFormController {
 
-    private Transfer transfer;
     private Map<String,String> accountNumberList;
 
     public PhoneVoucherInputController() {
         setCancelView("redirect:home");
-        setSuccessView("purchase/phoneVocherConfirm");
+        setSuccessView("/purchase/phoneVoucherConfirm");
     }
+
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView handleRequest()
+    public ModelAndView handleRequest(
+            @ModelAttribute("voucherPurchase") final VoucherPurchase voucherPurchase)
             throws Exception {
         ModelAndView model = new ModelAndView();
 
-        transfer = new Transfer();
-        transfer.setTransferType(Constants.SAME_BANK);
-
-        model.addObject("transfer", transfer);
-
-        accountNumberList = new LinkedHashMap<>();
-        accountNumberList.put("1112223333", "1112223333");
-        accountNumberList.put("3333344444", "3333344444");
-
-        model.addObject("transfer", transfer);
-        model.addObject("accountNumberList", accountNumberList);
-        model.addObject("transferTime", "transferNow");
-        model.addObject("newDate", DateUtil.convertDateToString(new Date()));
+        model.addObject("voucherPurchase", voucherPurchase);
         return model;
     }
 
@@ -58,8 +49,8 @@ public class PhoneVoucherInputController extends BaseFormController {
             throws Exception
     {
 
-        redirectAttributes.addFlashAttribute("transfer", transfer);
 
         return new ModelAndView(new RedirectView(getSuccessView()));
     }
+
 }

@@ -1,5 +1,7 @@
 package com.ib.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -27,7 +29,8 @@ public abstract class BaseModel extends BaseObject {
     }
 
     public String getStrTransactionDate() {
-        return strTransactionDate;
+        DateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        return sdf.format(transactionDate);
     }
 
     public void setStrTransactionDate(String strTransactionDate) {
