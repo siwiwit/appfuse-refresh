@@ -16,16 +16,16 @@
         </Menu>
         <Menu name="Purchase" title="menu.purchase" description="Purchase" page="/userform" roles="ROLE_USER">
             <Item name="PrepaidHandphone" title="menu.prepaid.handphone" description="Prepaid Handphone" page="/purchase/phoneVoucherInput"/>
-            <Item name="PrepaidElectricity" title="menu.prepaid.electricity" description="Prepaid Electrycity" page="/admin/users"/>
+            <Item name="PrepaidElectricity" title="menu.prepaid.electricity" description="Prepaid Electrycity" page="/purchase/electricityPurchaseInput"/>
             <!--<Item name="AirlineTicket" title="menu.airline.ticket" description="Airline Ticket" page="/admin/users"/>-->
         </Menu>
         <Menu name="Payment" title="menu.payment" description="Payment" page="/userform" roles="ROLE_USER">
-            <Item name="PostpaidHandphone" title="menu.postpaid.handphone" description="Postpaid Handphone" page="/admin/users"/>
-            <Item name="TelkomPhone" title="menu.telkom.phone" description="Telepon" page="/admin/users"/>
-            <Item name="PostpaidElectricity" title="menu.postpaid.eletricity" description="Postpaid Electricity" page="/admin/users"/>
-            <Item name="Water" title="menu.payment.water" description="Water" page="/admin/users"/>
-            <Item name="Tv" title="menu.payment.tv" description="TV" page="/admin/users"/>
-            <Item name="Internet" title="menu.payment.internet" description="Internet" page="/admin/users"/>
+            <Item name="PostpaidHandphone" title="menu.postpaid.handphone" description="Postpaid Handphone" page="/payment/handphonePaymentInput"/>
+            <Item name="TelkomPhone" title="menu.telkom.phone" description="Telepon" page="/payment/pstnPaymentInput"/>
+            <Item name="PostpaidElectricity" title="menu.postpaid.eletricity" description="Postpaid Electricity" page="/payment/electricityPaymentInput"/>
+            <Item name="Water" title="menu.payment.water" description="Water" page="/payment/waterPaymentInput"/>
+            <Item name="Tv" title="menu.payment.tv" description="TV" page="/payment/tvPaymentInput"/>
+            <Item name="Internet" title="menu.payment.internet" description="Internet" page="/payment/internetPaymentInput"/>
         </Menu>
         <Menu name="UserMenu" title="menu.user" description="User Menu" page="/userform" roles="ROLE_ADMIN,ROLE_USER"/>
         <Menu name="AdminMenu" title="menu.admin" description="Admin Menu" roles="ROLE_ADMIN" page="/admin/users">

@@ -1,7 +1,7 @@
-package com.ib.webapp.controller.purchase;
+package com.ib.webapp.controller.payment;
 
 import com.ib.Constants;
-import com.ib.model.VoucherPurchase;
+import com.ib.model.ElectricityPurchase;
 import com.ib.webapp.controller.BaseFormController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -19,34 +19,34 @@ import java.util.Date;
  * Created by IMAM on 12/25/14.
  */
 @Controller
-@RequestMapping("/purchase/phoneVoucherResult*")
-public class PhoneVoucherResultController extends BaseFormController {
+@RequestMapping("/purchase/electricityPurchaseResult*")
+public class HandponePaymentResultController extends BaseFormController {
 
-    public PhoneVoucherResultController() {
-        setCancelView("/purchase/phoneVoucherConfirm");
+    public HandponePaymentResultController() {
+        setCancelView("/purchase/electricityPurchaseConfirm");
         setSuccessView("redirect:home");
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView handleRequest(
-            @ModelAttribute("voucherPurchase") final VoucherPurchase voucherPurchase)
+            @ModelAttribute("electricityPurchase") final ElectricityPurchase electricityPurchase)
             throws Exception {
         ModelAndView model = new ModelAndView();
-        voucherPurchase.setTransactionDate(new Date());
-        voucherPurchase.setStatus(Constants.STATUS_SUKSES);
-        model.addObject("voucherPurchase", voucherPurchase);
+        electricityPurchase.setTransactionDate(new Date());
+        electricityPurchase.setStatus(Constants.STATUS_SUKSES);
+        model.addObject("electricityPurchase", electricityPurchase);
 
         return model;
     }
 
     @RequestMapping(method = RequestMethod.POST)
     public ModelAndView onSubmit(
-            @RequestParam(value = "voucherPurchase", required = true) final VoucherPurchase voucherPurchase,
+            @RequestParam(value = "electricityPurchase", required = true) final ElectricityPurchase electricityPurchase,
             final RedirectAttributes redirectAttributes,
             final HttpServletRequest request)
             throws Exception
     {
-        redirectAttributes.addFlashAttribute("voucherPurchase", voucherPurchase);
+        redirectAttributes.addFlashAttribute("electricityPurchase", electricityPurchase);
 
         return new ModelAndView(new RedirectView(getSuccessView()));
     }

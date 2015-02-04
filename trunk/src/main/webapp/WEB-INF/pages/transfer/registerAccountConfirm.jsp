@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <th style="width: 200px"><fmt:message key="token.response.appl1"/></th>
-                <td><form:password cssClass="form-control" path="${token}" id="token" showPassword="true" cssStyle="width: 150px;"/></td>
+                <td><form:password cssClass="form-control" path="${token}" id="token" showPassword="true" cssStyle="width: 150px;" maxlength="6"/></td>
             </tr>
         </table>
 
